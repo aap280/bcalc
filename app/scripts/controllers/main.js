@@ -7,12 +7,11 @@
  * # MainCtrl
  * Controller of the bcalcApp
  */
-angular.module('bcalcApp')
-  .controller('MainCtrl', function () {
-    //$scope.calculateBurn(billableHrs, daysPassed, totalMonthDays) {	//rewrite this garbage
-    //	return ((billableHrs / daysPassed) * totalMonthDays);
-    //}
-    function calculateBurn(){
-    	alert('aye');
-    }
+angular.module('bcalcApp', [])
+	this.$route = "/";
+  .controller('MainCtrl', function($scope) {
+    $scope.calculateBurn = function(){
+    	$scope.answer = ($scope.number1 / $scope.number2) * $scope.number3;
+    };
   });
+
